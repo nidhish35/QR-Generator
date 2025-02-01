@@ -66,3 +66,28 @@ img{
     margin: 20px auto;
     display: block;
 }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Wider container for smaller screens */
+        margin: 2rem auto 0; /* Reduced margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+
+    input, button {
+        font-size: 0.9rem; /* Smaller font size for inputs and buttons */
+    }
+
+    #qr-image {
+        width: 150px; /* Smaller QR code image for smaller screens */
+    }
+
+    img {
+        width: 80px; /* Smaller image size for smaller screens */
+        height: 80px;
+    }
+}
