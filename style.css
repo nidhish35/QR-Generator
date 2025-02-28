@@ -1,93 +1,126 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(51, 51, 208, 0.804);
-}
-
-.container{
-    max-height: 100vh;
-    width: 30%;
+    background-color: #3333d0cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     padding: 20px;
-    margin: 15rem auto 0;
-    background-color: rgb(146, 198, 244);
-    border-radius: 10px;
 }
 
-h1{
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    background-color: #92c6f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 20px;
 }
 
-p{
-    margin: 20px auto 10px;
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+p {
     font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
 }
 
-input{
-    width: 80%;
-    padding: 10px;
-    margin: 10px 40px;
-    border-radius: 5px;
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-button{
-    width: 80%;
-    padding: 10px;
-    margin: 20px 50px;
-    border-radius: 5px;
+input:focus {
+    border-color: #3333d0;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
     border: none;
-    background-color: rgb(51, 51, 208);
+    border-radius: 6px;
+    background-color: #3333d0;
     color: white;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-}
-#qr-image{
-    width: 200px;
-    border-radius: 5px;
-    max-height: 0px;
-    overflow: hidden;
-    margin: 1px auto;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-#qr-image.show-img{
-    max-height: 200px;
-    transition: max-height 0.5s;
+button:hover {
+    background-color: #2929a3;
+    transform: scale(1.05);
 }
-img{
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
+
+
+#qr-image {
+    width: 200px;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    margin: 10px auto 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#qr-image.show-img {
+    max-height: 200px;
+}
+
+
+img {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
     display: block;
 }
 
-/* Media Queries for Mobile Devices */
+
 @media (max-width: 768px) {
     .container {
-        width: 95%; /* Wider container for smaller screens */
-        margin: 2rem auto 0; /* Reduced margin for smaller screens */
+        max-width: 90%;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 1.2rem; /* Smaller font size for smaller screens */
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
     }
 
     input, button {
-        font-size: 0.9rem; /* Smaller font size for inputs and buttons */
+        font-size: 0.95rem;
     }
 
     #qr-image {
-        width: 150px; /* Smaller QR code image for smaller screens */
+        width: 150px;
     }
 
     img {
-        width: 80px; /* Smaller image size for smaller screens */
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
